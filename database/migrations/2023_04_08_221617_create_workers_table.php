@@ -17,7 +17,7 @@ class CreateWorkersTable extends Migration
             $table->id();
             $table->string('first_name', 255);
             $table->string('last_name', 255);
-            $table->string('username', 50);
+            $table->string('username', 50)->unique();
             $table->string('email', 255)->unique();
             $table->string('password', 255);
             $table->enum('domain', ['Maths', 'Physics', 'Sciences']);

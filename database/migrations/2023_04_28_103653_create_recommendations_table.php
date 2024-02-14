@@ -20,8 +20,6 @@ class CreateRecommendationsTable extends Migration
             $table->string('file_path');
             $table->unsignedBigInteger('worker_id')->nullable();
             $table->foreign('worker_id')->references('id')->on('workers');
-            $table->unsignedBigInteger('student_id')->nullable();
-            $table->foreign('student_id')->references('id')->on('students');
             $table->timestamps();
         });
     }

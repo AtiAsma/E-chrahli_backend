@@ -16,7 +16,7 @@ class CreateTasksTable extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table->text('body');
-            $table->enum('type', ['questions', 'explanation']);
+            $table->enum('type', ['Exercise', 'Explanation']);
             $table->enum('domain', ['Maths', 'Physics', 'Sciences']);
             $table->unsignedBigInteger('student_id');
             $table->foreign('student_id')->references('id')->on('students');
